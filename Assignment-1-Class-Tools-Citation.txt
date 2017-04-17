@@ -1,0 +1,6 @@
+Dan Ryan
+Assignment 1: Class Tools
+
+Fact: Python is loosely based on ABC, without ABC's main fault, which was being unable to import modules to extend a script.
+
+Source: http://www.artima.com/intv/pythonP.html

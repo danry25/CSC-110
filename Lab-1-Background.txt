@@ -1,0 +1,19 @@
+Dan Ryan
+Lab 1: Background
+
+1. Files are chunks of data, be it a binary you can execute or user/application data.
+   A folder is a hierarchical way to organize and store files and other folders (which presumably contain files).
+
+2. Subfolders (also known as subdirectories) are essentially a folder inside a folder.
+   Eg. bin is a subfolder in /usr , at /usr/bin
+
+3. Click and drag is a feature implemented by most desktop environments & file managers on Linux/Windows/OS X.
+   To move a file or shortcut to an application you merely click and hold the object while dragging it to where you intend for it to go.
+
+4. Double click as commonly referred to is pressing your left mouse button twice.
+   Depending on the context, double clicking can minimize/maximize a window.
+   On Windows double clicking is used to run applications/open files.
+
+5. File extension are essentially a convenient way to broadly represent what a file should contain.
+   Eg. a .json , .csv or  .xml file should contain formatted data.
+   Meanwhile, a .py or .sh file can be executed and edited as needed.

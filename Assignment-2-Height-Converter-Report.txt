@@ -1,0 +1,21 @@
+Dan Ryan
+Assignment 2 - Height Converter Report
+
+I built my height conversion script to a minimum viable product, using other works
+I've written as a reference when stuck. Once the initial height conversion from imperial
+to metric was done, I moved straight to the challenge version of the script after reading
+what was required of the standard and minimal variants.
+
+Testing of my program was all done by hand, had this program been more complex I'd automate 
+testing so as to make the best use of my time.
+
+The script I wrote is fairly minimal, no exception handling, basic integer validation
+for user input, and while it fully covers the task at hand, I would hate to put it in
+a scenario where it affected anyone besides myself.
+
+This assignment showed me that sometimes it is best to think around the issue, rather
+than directly solve it. What I mean by this is rather than taking a ton of time to
+figure out rounding, a simple adding or subtraction of a small amount (1/16th in this case)
+allowed me to avoid using if statements and anything terribly complex. Next time, I
+intend to fully read the assignment prior to beginning it, and perhaps plan out what portions
+need research, which I can dive right into, and then proceed from that place of knowledge.
