@@ -1,15 +1,8 @@
 # Dan Ryan
 # Lab 3: Section
-# Challenge
-# This script converts heights between imperial and metric units.-
-# gather information from the user
-# * enhance the output portion of the script
-#  X * Concatenate stuff: MATH 098-04
-#   * return errors like ERROR: Unrecognized section number.
-# X * determine the meeting time for the class, based on the table shown above
-# X * Make sure that the department code is all upper case. If it isn't, issue a warning message and convert it to upper case before you echo the value to the user.
-# * Make sure that the course number is 3 characters long and is numeric. If it isn't, print out the regular output message and a warning message.
-# * If the section number is unrecognized, don't print out the warning message(s), just print the error message.
+# Plus
+# This script parses class info and returns your class info & time.
+
 
 import sys
 
