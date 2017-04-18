@@ -34,19 +34,19 @@ try:
         print("WARNING: department code is not upper-case.")
         if not len(course) == 3 and course.isdigit():
             print("WARNING: course number is not 3-digits.")
-    try:
-        int(course)
-        course = course.zfill(3)
-
-    except ValueError:
-        print("WARNING: course number is not numeric.")
 
 
-except ValueError:
+except (KeyError, ValueError):
     print("ERROR: Unrecognized section number.")
     meeting_time = 'unknown'
     sys.exit(0)
 
+try:
+    int(course)
+    course = course.zfill(3)
+
+except ValueError:
+    print("WARNING: course number is not numeric.")
 
 # output the information to the user
 print("Your course {} {}-{} meets {}".format(dept.upper(), course, section, meeting_time))
