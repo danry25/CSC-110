@@ -3,7 +3,6 @@
 # Plus
 # This script parses class info and returns your class info & time.
 
-
 import sys
 
 timetable = {"01": "8:00 - 8:50 am, Daily",
@@ -23,11 +22,15 @@ try:
     int(section)
     # determine when the class meets
     meeting_time = timetable[section]
-    if not dept.isupper():
+    if dept.isupper():
+        pass
+    else:
         print("WARNING: department code is not upper-case.")
-        if not len(course) == 3 and course.isdigit():
-            print("WARNING: course number is not 3-digits.")
 
+    if len(course) == 3 and course.isdigit():
+        pass
+    else:
+        print("WARNING: course number is not 3-digits.")
 
 except (KeyError, ValueError):
     print("ERROR: Unrecognized section number.")
@@ -36,7 +39,7 @@ except (KeyError, ValueError):
 
 try:
     int(course)
-    course = course.zfill(3)
+    # course = course.zfill(3)  # Commented out cause input cleanup is overkill per professor
 
 except ValueError:
     print("WARNING: course number is not numeric.")
