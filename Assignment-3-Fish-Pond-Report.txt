@@ -1,0 +1,22 @@
+Dan Ryan
+Assignment 3 - Fish Pond
+
+I started this assignment by planning out components of the program I was going to write, 
+then I methodically built and tested each component I had outlined. First I built the user input &
+input validation portion starting on line 15, verified it worked correctly, and then went on to create
+the calculations for the 3 basic shapes. In doing so, I was able to build on the math I had used in each
+prior chunk of code.
+
+To test my code, I manually ran the program, put the output on a spreadsheet, and posted it to the week 3
+discussion. Though it was deleted, Dao helpfully pointed out that I got the wrong results for some parts
+of the oval & L shaped pond calculations. This caused me to do an audit of my work, and work each pond's
+dimensions out by hand, then using the work I had written down I transfered these equations back into my
+program.
+
+I believe everything should work in my program, I've tested quite a few cases. That being said, I'd like
+to go above and beyond by allowing user defined depth & dimensions.
+
+In doing this assignment, I learned that a little bit of planning goes a long way in saving implementation
+time and easing development. Additionally, I found that collaborating with my fellow students by sharing what
+my program should output was a big time saver, and improved the quality of my work by pointing out that my
+program was flawed.
