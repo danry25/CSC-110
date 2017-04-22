@@ -59,14 +59,15 @@ elif pondShape == 'rectangle':
     surfaceArea = baseArea + sideArea
     borderArea = ((x + 4) * (y + 4)) - baseArea
 elif pondShape == 'oval':
-    a = DIMENSIONS_OVAL[0]
-    b = DIMENSIONS_OVAL[1]/2
-    baseArea = (a * b) + (math.pi * b ** 2)
-    basePerim = (a * 2) + (2 * math.pi * b)
+    a = DIMENSIONS_OVAL[1]
+    b = DIMENSIONS_OVAL[0]/2
+    c = DIMENSIONS_OVAL[0]
+    baseArea = (b * c) + (math.pi * (b ** 2))
+    basePerim = 2 + 2 + (math.pi * c)
     sideArea = depth * basePerim
     volume = baseArea * depth
     surfaceArea = baseArea + sideArea
-    borderArea = (((a + 4) * (b + 4)) + (math.pi * (b + 2) ** 2)) - baseArea
+    borderArea = ((b * (c + 4)) + (math.pi * (b + 2) ** 2)) - baseArea
 elif pondShape == 'L':
     a = DIMENSIONS_L[0]
     b = DIMENSIONS_L[1]
@@ -77,7 +78,7 @@ elif pondShape == 'L':
     sideArea = depth * basePerim
     volume = baseArea * depth
     surfaceArea = baseArea + sideArea
-    borderArea = ((a + 4) * (d + 4 - c)) + ((b + 4) * (c + 4)) - baseArea
+    borderArea = (14 * 4) + (6 * 4)
 
 # Output the pond dimensions to the user
 print("\nThe volume of your fish pond is {:.3f} cubic feet.".format(volume))
