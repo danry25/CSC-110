@@ -1,0 +1,18 @@
+Dan Ryan
+Assignment 4 - Sentence Statistics
+
+I started this assignment by taking the code Dan (Jinguji) provided us, and slowly building out
+if/elif statements using the string functions Python offers to enumerate the quantity of
+each type of input the program was supposed to measure. After building the basics out, I went and
+read up on while loops as I recalled they could be quite handy for repeating a program until a
+certain condition/s was met.
+
+I have done a fair bit of testing of my program, hopefully enough to make sure its (somewhat) reliable.
+Inputs that were provided as examples have been tested & compared outputs with what was given, I also
+tried a bunch of special unicode characters mixed with other strings so as to cover edge cases. So far
+I've yet to see breakage!
+
+I learned a bit about while loops and methods of a string. I've worked with both before, but until now I
+hadn't spent the time to really read up on either and understand how they work and how to use while loops
+& methods of a string properly. Next time I tackle an assignment like this, I should start ASAP, as the
+sooner I finish the program, the better off I am!
