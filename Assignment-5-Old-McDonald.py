@@ -3,8 +3,6 @@
 # Challenge
 # This script calculates statistics on sentences that were inputted by the user.
 
-fifthVerseDone = False
-
 
 def title():
     print("Old McDonald\n")
@@ -32,21 +30,10 @@ def verse(animal, sound):
 
 
 def newVerse():
-    global fifthVerseDone
     animal = input("Enter an animal: ")
     sound = input("Enter the sound the {} makes: ".format(animal))
     print()
     verse(animal, sound)
-    if not fifthVerseDone:
-        fifthVerseDone = True
-        fifthVerse = input("Do you want to have a fifth verse (yes/no)? ")
-        print()
-        if fifthVerse == "no":
-            pass
-        else:
-            newVerse()
-    else:
-        pass
 
 
 def main():
@@ -55,6 +42,12 @@ def main():
     verse('cow', 'moo')
     verse('duck', 'quack')
     newVerse()
+    fifthVerse = input("Do you want to have a fifth verse (yes/no)? ")
+    print()
+    if fifthVerse == "no":
+        pass
+    else:
+        newVerse()
 
 
 main()
