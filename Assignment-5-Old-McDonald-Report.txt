@@ -8,4 +8,6 @@ through some of the examples provided, and it seemed to cover the use case that 
 works, though I've only tested it a few dozen times.
 
 This assignment really taught me how to fully work with functions and global variables, as I had forgotten how
-to pass parameters & global variables into a function.
+to pass parameters & global variables into a function. I did initally screw this up and put the 5th verse logic
+in the newVerse function, though upon rereading the requirements I realized I had misread and that logic should
+be in the main function.
