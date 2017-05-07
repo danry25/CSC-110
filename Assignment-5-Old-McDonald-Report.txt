@@ -10,4 +10,5 @@ works, though I've only tested it a few dozen times.
 This assignment really taught me how to fully work with functions and global variables, as I had forgotten how
 to pass parameters & global variables into a function. I did initally screw this up and put the 5th verse logic
 in the newVerse function, though upon rereading the requirements I realized I had misread and that logic should
-be in the main function.
+be in the main function. I think next time I should do the assignment earlier, and audit it the day after
+instead of waiting till the last minute to audit the program for compliance with requirements.
