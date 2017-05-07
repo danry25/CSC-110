@@ -3,17 +3,50 @@
 # Challenge
 # This script calculates statistics on sentences that were inputted by the user.
 
+fifthVerseDone = False
+
 
 def title():
     print("Old McDonald\n")
 
 
+def helper():
+        print("Old McDonald had a farm, E-I-E-I-O.")
+
+
 def verse(animal, sound):
-    print("Old McDonald had a farm, E-I-E-I-O.")
-    print("And on that farm he had a {}, E-I-E-I-O.".format(animal))
-    print("With a {sound}-{sound} here, and a {sound}-{sound} there.".format(sound=sound))
-    print("Here a {sound}, there a {sound}, everywhere a {sound}-{sound}.".format(sound=sound))
-    print("Old McDonald had a farm, E-I-E-I-O.\n")
+    if animal[0] in "AEIOUaeiou":
+        anAnimal = "an"
+    else:
+        anAnimal = "a"
+    if sound[0] in "AEIOUaeiou":
+        anSound = "an"
+    else:
+        anSound = "a"
+    helper()
+    print("And on that farm he had {} {}, E-I-E-I-O.".format(anAnimal, animal))
+    print("With {anSound} {sound}-{sound} here, and {anSound} {sound}-{sound} there.".format(sound=sound, anSound=anSound))
+    print("Here {anSound} {sound}, there {anSound} {sound}, everywhere {anSound} {sound}-{sound}.".format(sound=sound, anSound=anSound))
+    helper()
+    print()
+
+
+def newVerse():
+    global fifthVerseDone
+    animal = input("Enter an animal: ")
+    sound = input("Enter the sound the {} makes: ".format(animal))
+    print()
+    verse(animal, sound)
+    if not fifthVerseDone:
+        fifthVerseDone = True
+        fifthVerse = input("Do you want to have a fifth verse (yes/no)? ")
+        print()
+        if fifthVerse == "no":
+            pass
+        else:
+            newVerse()
+    else:
+        pass
 
 
 def main():
@@ -21,6 +54,7 @@ def main():
     verse('chicken', 'cluck')
     verse('cow', 'moo')
     verse('duck', 'quack')
+    newVerse()
 
 
 main()
