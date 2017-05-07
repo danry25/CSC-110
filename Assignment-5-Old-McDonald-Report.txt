@@ -1,0 +1,11 @@
+Dan Ryan
+Assignment 5 - Old McDonald
+
+How did you approach (get started with) this assignment?
+To start this assignment, I built a list of requirements and built a rough initial version and then committed,
+then proceeded to build the standard & challenge versions atop this base. I tested my program by running it
+through some of the examples provided, and it seemed to cover the use case that was defined. So far everything
+works, though I've only tested it a few dozen times.
+
+This assignment really taught me how to fully work with functions and global variables, as I had forgotten how
+to pass parameters & global variables into a function.
