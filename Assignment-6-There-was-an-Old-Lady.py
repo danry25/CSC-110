@@ -39,7 +39,7 @@ def verse2():
 
 
 def verse3():
-    swallowed("bird", ",")
+    swallowed("bird", ".")
     print("How absurd to swallow a bird.")
     swallowedCatch("bird", "spider", ",")
     wriggled()
@@ -64,9 +64,10 @@ def verse5():
     wriggled()
     dontKnowWhy()
 
+
 def verse6():
     swallowed("hawk", ".")
-    print("Would you try to swallow a hawk?")
+    print("It would be a site to see, for her to swallow a hawk.")
     swallowedCatch("hawk", "dog", ".")
     swallowedCatch("dog", "cat", ".")
     swallowedCatch("cat", "bird", ".")
