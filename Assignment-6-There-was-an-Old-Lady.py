@@ -9,24 +9,29 @@ def title():
     print('There was an Old Lady\n')
 
 
+# prints initial swallowed line
 def swallowed(animal, punctuation):
     print ("There was an old lady who swallowed a {}{}".format(animal, punctuation))
 
 
+# prints that she swallowed another animal to catch prior animal swallowed
 def swallowedCatch(animal, animal2, punctuation):
     print("She swallowed the {} to catch the {}{}".format(animal, animal2, punctuation))
 
 
+# Prints 2 lines in each stanza, 4 lines before end of stanza
 def wriggled():
     print("That wriggled and jiggled and tickled inside her.")
     print("She swallowed the spider to catch the fly.")
 
 
+# Prints final 2 lines in each stanza
 def dontKnowWhy():
     print("I don't know why she swallowed the fly.")
     print("Perhaps she'll die.\n")
 
 
+# Below is each verse, 1 through 6 & lastverse
 def verse1():
     swallowed("fly", ".")
     dontKnowWhy()
@@ -81,6 +86,7 @@ def lastverse():
     print("She's dead, of course.")
 
 
+# Main function, causes all the other functions to actually run!
 def main():
 
     # print the title
