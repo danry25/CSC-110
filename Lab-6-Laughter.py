@@ -35,10 +35,10 @@ def main():
         if rating2 == 0:
             laugh = 'Hee hee'
             ratingretry = False
-        elif rating[0] == '-' and rating2 <= 7 and len(rating) == 2:
+        elif rating[0] == '-' and rating2 <= 7 and rating2 >= -7 and len(rating) == 2:
             laugh = 'Ho' * int(rating[1])
             ratingretry = False
-        elif rating2 <= 7:
+        elif rating2 <= 7 and rating2 >= -7:
             laugh = 'Bwa' + 'ha' * rating2
             ratingretry = False
         else:
