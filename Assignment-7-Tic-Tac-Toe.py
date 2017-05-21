@@ -27,8 +27,8 @@ UPPER_MIDDLE = 7
 UPPER_RIGHT = 8
 
 # Store square's x & y coordinate values
-squareX = [-101, 0, 101, -101, 0, 101, -101, 0, 101]
-squareY = [-101, -101, -101, 0, 0, 0, 101, 101, 101]
+squareX = [-150, 49, 150, -150, 49, 150, -150, 50, 150]
+squareY = [-150, -150, -150, 49, 49, 49, 150, 150, 150]
 
 
 def board(x, y, canvas):
@@ -53,15 +53,19 @@ def board(x, y, canvas):
 
 
 # helper function to draw X
-def drawX():
-    canvas.line([[-140, -140], [-60, -60]], width=7)
-    canvas.line([[-60, -140], [-140, -60]], width=7)
+def drawX(position, canvas):
+    x = squareX[position] + 10
+    y = squareY[position] + 10
+    canvas.line([[x, y], [x + 80, y + 80]], width=7)
+    canvas.line([[x + 80, y], [x, y + 80]], width=7)
+    # canvas.line([[-140, -140], [-60, -60]], width=7)
+    # canvas.line([[-60, -140], [-140, -60]], width=7)
 
 
 # helper function to draw O
 def drawO(position, canvas):
-    x = squareX[position]
-    y = squareY[position]
+    x = squareX[position] + 49
+    y = squareY[position] - 51
     # squares[positions.index(position)]
     canvas.circle([x, y], 40, width=7)
     pass
@@ -75,8 +79,8 @@ def upTriangle(x, y, w, h, color, canvas):
 
 # call main, which creates the Tic-Tac-Toe grid/board
 board(-150, -150, canvas)
-drawX()
-# drawO(UPPER_LEFT, canvas)
+drawX(LOWER_LEFT, canvas)
+drawO(UPPER_LEFT, canvas)
 # drawO(UPPER_MIDDLE, canvas)
 # drawO(CENTER, canvas)
 # drawO(MID_LEFT, canvas)
