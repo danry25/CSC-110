@@ -1,14 +1,14 @@
 # Dan Ryan
 # Assignment 7: Tic-Tac-Toe
-# Challenge
+# Standard
 # Drawing a Tic-Tac-Toe board for fun and profit!
 
 # make Gui3 accessible
 import Gui3
 
 # declare some constants
-CANVAS_WIDTH = 350
-CANVAS_HEIGHT = 350
+CANVAS_WIDTH = 690
+CANVAS_HEIGHT = 360
 # create the window object and set characteristics
 win = Gui3.Gui()
 win.title('Tic-Tac-Toe')
@@ -30,32 +30,42 @@ UPPER_RIGHT = 8
 squareX = [-150, 49, 150, -150, 49, 150, -150, 50, 150]
 squareY = [-150, -150, -150, 49, 49, 49, 150, 150, 150]
 
+# # Make board size a global variable
+# size = 0
+# x = -150
+# y = -150
 
-def board(x, y, canvas):
 
+def board(x, y, canvas, size=300):
+    size = size
+    half = size/2
+    six = size/6
+    y = half + six + y - 50
+    x = half + six + x - 50
+    if size <= 50:
+        linewidth = 1
+    else:
+        linewidth = 3
     # make upper horizontal line
-    canvas.rectangle([[-150, 52],
-                     [150, 52-3]], fill='#000000')
+    canvas.rectangle([[-half + x, six + y],
+                     [half + x, six + y - linewidth]], fill='#000000')
     # make lower horizontal line
-    canvas.rectangle([[-150, -49],
-                     [150, -49-3]], fill='#000000')
+    canvas.rectangle([[-half + x, -six + y],
+                     [half + x, -six + y - linewidth]], fill='#000000')
     # make left vertical line
-    canvas.rectangle([[-49, 150],
-                     [-49-3, -150]], fill='#000000')
+    canvas.rectangle([[-six + x, half + y],
+                     [-six + x - linewidth, -half + y]], fill='#000000')
     # make right vertical line
-    canvas.rectangle([[52, 150],
-                     [52-3, -150]], fill='#000000')
-    # and the grass
-    # canvas.rectangle([[-CANVAS_WIDTH/2 + 2, -CANVAS_HEIGHT/2],
-    #                  [CANVAS_WIDTH/2, 0]], fill='#009900')
-    #
-    # upTriangle(-100, -50, 120, 30, '#993300', canvas)
+    canvas.rectangle([[six + x, half + y],
+                     [six + x - linewidth, -half + y]], fill='#000000')
 
 
 # helper function to draw X
-def drawX(position, canvas):
-    x = squareX[position] + 10
-    y = squareY[position] + 10
+def drawX(x, y, canvas):
+    # x = squareX[position] + 10
+    # y = squareY[position] + 10
+    x = x + 10
+    y = y + 10
     canvas.line([[x, y], [x + 80, y + 80]], width=7)
     canvas.line([[x + 80, y], [x, y + 80]], width=7)
     # canvas.line([[-140, -140], [-60, -60]], width=7)
@@ -63,27 +73,32 @@ def drawX(position, canvas):
 
 
 # helper function to draw O
-def drawO(position, canvas):
-    x = squareX[position] + 49
-    y = squareY[position] - 51
+def drawO(x, y, canvas):
+    # x = squareX[position] + 49
+    # y = squareY[position] - 51
+    x = x + 49
+    y = y - 51
     # squares[positions.index(position)]
     canvas.circle([x, y], 40, width=7)
     pass
 
 
-# define a helper function to draw a triangle
-def upTriangle(x, y, w, h, color, canvas):
-    canvas.polygon([[x, y], [x + w, y], [x + w/2, y + h]],
-                   fill=color, outline='black')
+# Partially done attempt at challenge work
+# board(-150, -150, canvas, 50)
+# drawX(LOWER_LEFT, canvas)
+# drawO(UPPER_LEFT, canvas)
 
-
+# 1st Board
+board(-315, -150, canvas)
+drawX(-315, -150, canvas)
+drawO(-215, -50, canvas)
+drawX(-215, 50, canvas)
+drawO(-215, 50, canvas)
+# 2nd Board
+board(15, -150, canvas)
+drawX(15, -150, canvas)
+drawO(115, -50, canvas)
+drawX(115, 50, canvas)
+drawO(115, 50, canvas)
 # call main, which creates the Tic-Tac-Toe grid/board
-board(-150, -150, canvas)
-drawX(LOWER_LEFT, canvas)
-drawO(UPPER_LEFT, canvas)
-# drawO(UPPER_MIDDLE, canvas)
-# drawO(CENTER, canvas)
-# drawO(MID_LEFT, canvas)
-# drawO(LOWER_LEFT, canvas)
-# invoke tkinter: displays objects drawn!
 win.mainloop()

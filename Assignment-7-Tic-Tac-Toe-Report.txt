@@ -1,0 +1,11 @@
+Dan Ryan
+Assignment 7 - Tic-Tac-Toe
+
+I started this assignment by building out the minimal version, and slowly adding onto it. In retrospect,
+if I had planned through what I was going to be building, and thought about it for 30 minutes, I likely
+would have been able to complete the challenge version. Sadly, I only had a few hours and a poor head space
+to spend on this assignment, causing poor performance on my part.
+
+Next time, begining with this next lab and assignment, I will start immediately and fully digest what the project
+requirements are, so as to give myself multiple different potential windows to do this assignment. I think I learned
+the importance of mindset and planning this week.
