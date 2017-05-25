@@ -4,49 +4,22 @@
 # Find some words containing a string in a file
 
 # Bring in sys.argv to handle runtime options
-# import sys.argv as userarg
+# import sys as sys
 
 # Open, read & parse file into an array so we can work with it
-jf = open('jabber.txt', 'r')
-# Open jabber-selected-words.txt for writing
-jswf = open('jabber-selected-words.txt', 'w')
-jsw = []
+all_words = []
+with open('jabber.txt') as j:
+    line = j.readline()
+    while line != "":
+        all_words += line.strip().split(" ")
+        line = j.readline()
 
-# read a line from jabber.txt
-line = jf.readline()
-chars = 'j'
-
-# While there are still lines to be read:
-while line != '':
-    if line not in jsw:
-        jsw.append(line)
-        print(line, end=' ')
-        # read the next line from jabber.txt
-        line = jf.readline()
-
-
-# Check if the line contains a letter:
-for letter in 'abcdefghijklmnopqrstuvwxyz':
-    chars = letter
-    if chars in jsw:
-        # if it does, write it to jabber-selected-words.txt
-        jswf.write(line)
-        # Then strip the newline bit
-        line = line.strip('\n')
-        # Append it to the array to be printed
-        jsw.append(line)
-        print(line, end=' ')
-    elif chars.upper() in line:
-        # if it does, write it to jabber-selected-words.txt
-        jswf.write(line)
-        # Then strip the newline bit
-        line = line.strip('\n')
-        # Append it to the array to be printed
-        jsw.append(line)
-
-# close the files
-jf.close()
-jswf.close()
-
-for thing in jsw:
-    print(thing)
+with open('jabber-selected-words.txt', 'w') as out:
+    for letter in 'abcdefghijklmnopqrstuvwxyz':
+        letter_words = []  # All the words that have this letter in them
+        for word in all_words:
+            if letter in word.lower():
+                letter_words.append(word)
+        out.write("{} words:\n".format(letter.upper()))
+        out.write(" ".join(letter_words))
+        out.write("\n")
