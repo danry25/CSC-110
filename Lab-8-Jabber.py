@@ -20,17 +20,17 @@ with open('jabber.txt') as j:
 
 # Function for finding a letter or string in a word
 def letterProcessor(letter):
-            # All the words that have this letter in them
-            letter_words = []
-            # Loop through each word
-            for word in all_words:
-                # Append these words to the array if they match
-                if letter in word.lower():
-                    letter_words.append(word)
-            # Output all these words into a labeled set
-            out.write("{} words:\n".format(letter.upper()))
-            out.write(" ".join(letter_words))
-            out.write("\n")
+        # All the words that have this letter in them
+        letter_words = []
+        # Loop through each word
+        for word in all_words:
+            # Append these words to the array if they match
+            if letter in word.lower():
+                letter_words.append(word)
+        # Output all these words into a labeled set
+        out.write("{} words:\n".format(letter.upper()))
+        out.write(" ".join(letter_words))
+        out.write("\n")
 
 
 # Write the labeled set all to a file
