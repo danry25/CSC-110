@@ -10,30 +10,36 @@
 jf = open('jabber.txt', 'r')
 # Open jabber-selected-words.txt for writing
 jswf = open('jabber-selected-words.txt', 'w')
-
-# Loop through each item in array
-for word in jf:
-    # Check if there are any duplicates in the array
-    if word in jf:
-        pass
-
+jsw = []
 
 # read a line from jabber.txt
 line = jf.readline()
+chars = 'j'
 
-# while there are still lines to be read:
+# While there are still lines to be read:
 while line != '':
-    print("holla")
-    # check if the line contains a 'j':
-    if 'j' in line:
+    # Check if the line contains a j or J:
+    if chars in line:
         # if it does, write it to jabber-selected-words.txt
-        jswf.append(line)
-        print(line)
+        jswf.write(line)
+        # Then strip the newline bit
+        line = line.strip('\n')
+        # Append it to the array to be printed
+        jsw.append(line)
+    elif 'J' in line and chars == 'j':
+        # if it does, write it to jabber-selected-words.txt
+        jswf.write(line)
+        # Then strip the newline bit
+        line = line.strip('\n')
+        # Append it to the array to be printed
+        jsw.append(line)
     # read the next line from jabber.txt
     line = jf.readline()
+
 
 # close the files
 jf.close()
 jswf.close()
 
-print(line)
+for thing in jsw:
+    print(thing)
