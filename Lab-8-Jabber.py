@@ -4,7 +4,7 @@
 # Find some words containing a string in a file
 
 # Bring in sys.argv to handle runtime options
-# import sys as sys
+import sys as sys
 
 # Open, read & parse file into an array so we can work with it
 all_words = []
@@ -15,7 +15,8 @@ with open('jabber.txt') as j:
         line = j.readline()
 
 with open('jabber-selected-words.txt', 'w') as out:
-    for letter in 'abcdefghijklmnopqrstuvwxyz':
+    try:
+        letter = sys.argv[1]
         letter_words = []  # All the words that have this letter in them
         for word in all_words:
             if letter in word.lower():
@@ -23,3 +24,12 @@ with open('jabber-selected-words.txt', 'w') as out:
         out.write("{} words:\n".format(letter.upper()))
         out.write(" ".join(letter_words))
         out.write("\n")
+    except:
+        for letter in 'abcdefghijklmnopqrstuvwxyz':
+            letter_words = []  # All the words that have this letter in them
+            for word in all_words:
+                if letter in word.lower():
+                    letter_words.append(word)
+            out.write("{} words:\n".format(letter.upper()))
+            out.write(" ".join(letter_words))
+            out.write("\n")
