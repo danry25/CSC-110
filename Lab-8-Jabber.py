@@ -8,7 +8,6 @@ import sys as sys
 
 # Open, read & parse file into an array so we can work with it
 all_words = []
-letter = ''
 # Open file
 with open('jabber.txt') as j:
     # Process line into variable
@@ -20,7 +19,7 @@ with open('jabber.txt') as j:
 
 
 # Function for finding a letter or string in a word
-def letterProcessor():
+def letterProcessor(letter):
             # All the words that have this letter in them
             letter_words = []
             # Loop through each word
@@ -39,9 +38,8 @@ with open('jabber-selected-words.txt', 'w') as out:
     # Check if any arguments were passed when running the file
     try:
         letter = sys.argv[1]
-        letterProcessor()
+        letterProcessor(letter)
     # If not, just do the whole alphabet
     except:
         for letter in 'abcdefghijklmnopqrstuvwxyz':
-            letter = letter
-            letterProcessor()
+            letterProcessor(letter)
