@@ -20,7 +20,7 @@ chars = 'j'
 while line != '':
     if line not in jsw:
         jsw.append(line)
-            print(line, end=' ')
+        print(line, end=' ')
         # read the next line from jabber.txt
         line = jf.readline()
 
