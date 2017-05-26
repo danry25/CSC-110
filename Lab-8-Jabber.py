@@ -4,7 +4,7 @@
 # Find some words containing a string or a letter in a file
 
 # Bring in sys.argv to handle runtime options
-import sys as sys
+import sys
 
 # Open, read & parse file into an array so we can work with it
 all_words = []
