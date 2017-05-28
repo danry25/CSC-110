@@ -5,9 +5,11 @@
 
 # create a shared list
 theList = []
+# Open storage file
 try:
     SHOPPING = open('shopping-list.txt')
 except:
+    # If storage file doesn't exist, create it
     open('shopping-list.txt', 'w')
     SHOPPING = open('shopping-list.txt')
 
@@ -39,22 +41,28 @@ def addToList(item):
 def getInput():
     # Tell user how many items are on the list
     print('You have {} items on your list.'.format(len(theList)))
-    # Prompt for user action
     userinput = ''
     usertry = False
     while userinput == '':
+        # Check if the user has tried before
         if usertry:
             print("Shopping list items cannot be blank")
+        # Prompt for user action
         userinput = input('Enter an item or command: ')
+        # Mark user as having given blank input
         usertry = True
+    # Throw this data back to the relevant function
     return userinput
 
 
+# Print the list for the user
 def printList():
     count = 1
     print('Your shopping list:')
+    # Print off each item in the list
     for x in theList:
         print("  {}.".format(count), x)
+        # Enumerate our way for each item on the list, eg 1. Thing, 2. Stuff
         count += 1
 
 
@@ -65,43 +73,54 @@ def emptyList():
         theList.pop()
 
 
+# Give the user a way to prune their shopping list
 def removeFromList(item):
+    # Trim away -r by trashing the first 3 chars
     item = item[3:]
+    # Remove the item if they gave its string
     try:
         theList.remove(item)
         print("Item {} removed from the list.".format(item))
+    # Try a few other ways of removing the item if its string didn't match in the array
     except:
         try:
             itemNum = int(item) - 1
+            # Reject negative numbers
             if '-' in item:
                 print("'{}'could not be located, index starts at 1".format(item))
+            # Remove item by item number
             else:
                 itemStr = theList[itemNum]
                 theList.remove(itemStr)
                 print("Item {} removed from the list.".format(itemStr))
+        # Complain to user if we can't find an item string or number that matches
         except:
             print("'{}'could not be located".format(item))
 
 
+# Initiate the program
 def startProgram():
     print('Welcome to the XYZ Shopping List Program')
-    # Loop through each line and process it into all_words
+    # Loop through each line and process it into theList
     line = SHOPPING.readline()
     while line != "":
         theList.append(line.rstrip('\n'))
         line = SHOPPING.readline()
 
 
+# End the program
 def endProgram():
     print('Thank you for using the XYZ Shoppling List Program.')
-
+    # Write shopping list to disk
     SH = open('shopping-list.txt', 'w')
     for thing in theList:
         SH.write(thing + '\n')
+    # Close files
     SH.close()
     SHOPPING.close()
 
 
+# Main function, kicks off other functions depending on what the user inputs
 def main():
     startProgram()
     printMenu()
@@ -123,4 +142,5 @@ def main():
     endProgram()
 
 
+# Call main function to start the program
 main()
