@@ -60,13 +60,21 @@ def emptyList():
 
 
 def removeFromList(item):
+    item = item[3:]
     try:
-        itemStr = theList[(int(item) - 1)]
-        theList.remove(itemStr)
-        print("Item {} removed from the list.".format(itemStr))
-    except:
         theList.remove(item)
         print("Item {} removed from the list.".format(item))
+    except:
+        try:
+            itemNum = int(item) - 1
+            if '-' in item:
+                print("'{}'could not be located, index starts at 1".format(item))
+            else:
+                itemStr = theList[itemNum]
+                theList.remove(itemStr)
+                print("Item {} removed from the list.".format(itemStr))
+        except:
+            print("'{}'could not be located".format(item))
 
 
 def startProgram():
@@ -89,7 +97,6 @@ def main():
         elif item == '-e':
             emptyList()
         elif "-r " in item:
-            item = item.lstrip('-r ')
             removeFromList(item)
         else:
             addToList(item)
