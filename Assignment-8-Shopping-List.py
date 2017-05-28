@@ -12,6 +12,7 @@ def printMenu():
     print("Here are the list of commands:")
     print("  -p : Print the List")
     print("  -e : Empty the List")
+    print("  -r item : Removes item from list")
     print("  -x : Exit")
     print("  -h : Print this command list")
 
