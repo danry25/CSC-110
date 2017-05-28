@@ -5,6 +5,11 @@
 
 # create a shared list
 theList = []
+try:
+    SHOPPING = open('shopping-list.txt')
+except:
+    open('shopping-list.txt', 'w')
+    SHOPPING = open('shopping-list.txt')
 
 
 # Prints menu of stuff our program can do
@@ -80,10 +85,21 @@ def removeFromList(item):
 
 def startProgram():
     print('Welcome to the XYZ Shopping List Program')
+    # Loop through each line and process it into all_words
+    line = SHOPPING.readline()
+    while line != "":
+        theList.append(line.rstrip('\n'))
+        line = SHOPPING.readline()
 
 
 def endProgram():
     print('Thank you for using the XYZ Shoppling List Program.')
+
+    SH = open('shopping-list.txt', 'w')
+    for thing in theList:
+        SH.write(thing + '\n')
+    SH.close()
+    SHOPPING.close()
 
 
 def main():

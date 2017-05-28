@@ -1,4 +1,5 @@
 # Ignore pycache
 __pycache__/
-# Ignore output file
+# Ignore output/storage files
 jabber-selected-words.txt
+shopping-list.txt
