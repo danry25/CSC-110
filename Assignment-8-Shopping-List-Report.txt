@@ -1,0 +1,11 @@
+Dan Ryan
+Assignment 8: Shopping List Report
+
+The approach I took on this assignment was to go and flesh out each function, step by step and get it
+fully working, to the point that it would meet the Standard & Challenge criteria. I think I accomplished
+this goal, as the program seems to be fully functional, including file storage and decent error handling.
+
+This assignment taught me quite a bit about file handling, and how simple mistakes like /n instead of \n
+can eat hours of your time if you don't catch them early on. Next time perhaps switching focus from
+working on one function to another might be a better choice than spending significant amounts of time at
+an impasse, where fresh eyes and a clear head would allow you to see most of the issues rather quickly.
