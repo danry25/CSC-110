@@ -23,7 +23,7 @@ def addToList(item):
         # Add item to list
         theList.append(item)
         # Tell user item is on list
-        print("'{}'' added to the list.".format(item))
+        print("'{}' added to the list.".format(item))
     # Tell user that item is already on list
     else:
         print("'{}' is already on the list".format(item))
@@ -34,7 +34,14 @@ def getInput():
     # Tell user how many items are on the list
     print('You have {} items on your list.'.format(len(theList)))
     # Prompt for user action
-    return input('Enter an item or command: ')
+    userinput = ''
+    usertry = False
+    while userinput == '':
+        if usertry:
+            print("Shopping list items cannot be blank")
+        userinput = input('Enter an item or command: ')
+        usertry = True
+    return userinput
 
 
 def printList():
@@ -54,13 +61,12 @@ def emptyList():
 
 def removeFromList(item):
     try:
-        itemNum = int(item) - 1
-        theList.remove(theList[itemNum])
-        print("Item {} removed from the list.".format(theList[itemNum]))
+        itemStr = theList[(int(item) - 1)]
+        theList.remove(itemStr)
+        print("Item {} removed from the list.".format(itemStr))
     except:
         theList.remove(item)
         print("Item {} removed from the list.".format(item))
-    print(item)
 
 
 def startProgram():
@@ -82,11 +88,9 @@ def main():
             printMenu()
         elif item == '-e':
             emptyList()
-        elif '-r ' in item:
+        elif "-r " in item:
             item = item.lstrip('-r ')
             removeFromList(item)
-        elif item == '':
-            print()
         else:
             addToList(item)
         item = getInput()
