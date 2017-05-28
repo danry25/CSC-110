@@ -99,6 +99,8 @@ def main():
             emptyList()
         elif "-r " in item:
             removeFromList(item)
+        elif item[0] == "-":
+            print("Sorry, your command was unrecognized. Try -h for help!")
         else:
             addToList(item)
         item = getInput()
