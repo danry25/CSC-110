@@ -3,3 +3,4 @@ __pycache__/
 # Ignore output/storage files
 jabber-selected-words.txt
 shopping-list.txt
+jabber-out.txt
