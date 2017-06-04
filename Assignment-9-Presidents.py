@@ -70,6 +70,16 @@ def fileWriter(outFile, data):
         print('Could not open or write to {}, check your file permissions.'.format('same_order.txt'))
 
 
+class Student:
+    def __init__(self, name, grade, age):
+        self.name = name
+        self.grade = grade
+        self.age = age
+        
+    def __repr__(self):
+         return repr((self.name, self.grade, self.age))
+
+
 def main():
     pres = fileParser('presidents.txt')
     same = sameOrder(pres)
