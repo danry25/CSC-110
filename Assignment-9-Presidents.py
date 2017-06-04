@@ -9,8 +9,7 @@ def fileParser(inFile):
     # try:
         # Open and parse requested file
         unparsedFile = open(inFile)
-        # Process line into variable, skip first line
-        line = unparsedFile.readline()
+        # Process line into variable
         line = unparsedFile.readline()
         # Loop through each line and process it into separatedWords
         while line != "":
@@ -39,7 +38,8 @@ def sameOrder():
         meter = pres[::3]
         counter = 0
         for thing in meter:
-            parsedFile.write(thing + '' + pres[1+counter]'\n')
+            parsedFile.write(thing + ' was president from ' + pres[1+counter] + ' to ' + pres[2+counter] + '.' '\n')
+            counter += 3
         # Close files
         parsedFile.close()
     except:
@@ -49,6 +49,7 @@ def sameOrder():
 
 def main():
     fileParser('presidents.txt')
+    sameOrder()
     print(pres)
 
 
