@@ -18,10 +18,12 @@ def fileParser(inFile):
                 pres.append(lineParsed[1] + ' ' + lineParsed[0])
                 pres.append(lineParsed[2])
                 pres.append(lineParsed[3])
+                pres.append(lineParsed[0])
             else:
                 pres.append(lineParsed[2] + ' ' + lineParsed[1] + ' ' + lineParsed[0])
                 pres.append(lineParsed[3])
                 pres.append(lineParsed[4])
+                pres.append(lineParsed[0])
 
             # Read next line
             line = unparsedFile.readline()
@@ -33,12 +35,25 @@ def fileParser(inFile):
 
 
 def sameOrder(pres):
-    meter = pres[::3]
+    meter = pres[::4]
     counter = 0
     data = []
     for thing in meter:
         data.append(thing + ' was president from ' + pres[1+counter] + ' to ' + pres[2+counter] + '.' '\n')
-        counter += 3
+        counter += 4
+    return data
+
+
+def lastName(pres):
+    meter = pres[::4]
+    counter = 0
+    orgData = []
+    data = []
+    orgData = sorted(pres, key=lambda president: president[3])
+    print(orgData)
+    for thing in meter:
+        data.append(orgData[counter] + ' was president from ' + orgData[1+counter] + ' to ' + orgData[2+counter] + '.' '\n')
+        counter += 4
     return data
 
 
@@ -59,6 +74,9 @@ def main():
     pres = fileParser('presidents.txt')
     same = sameOrder(pres)
     fileWriter('same_order.txt', same)
+    last = lastName(pres)
+    fileWriter('last_name.txt', last)
+    # inauguration.txt
 
 
 main()
