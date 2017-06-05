@@ -1,0 +1,11 @@
+Dan Ryan
+Assignment 9: Presidents
+
+The first thing I did was work on parsing my file into a list. I started out with a couple extra 
+if statements that were totally unneeded, but eventually cleaned those up. I did a minor amount of planning
+prior to starting to code this assignment. All 3 files seem to be generated correctly, so everything looks
+to work.
+
+I think this assignment taught me to use return statements, as outside of codingbat I had yet to use them
+(surprisingly). The one thing I'd do differently next time is start earlier. I've been rather shabby in
+this regard as of late, giving myself just enough time to (hopefully) do the assignment.
