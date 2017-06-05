@@ -1,3 +1,6 @@
+# Dan Ryan
+# Quiz 9: Basic Competence
+# Create a list and sum some of the numbers from it. End goal is printing 100!
 
 
 # Sums odd values in array
