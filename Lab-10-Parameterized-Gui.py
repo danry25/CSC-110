@@ -4,7 +4,7 @@ import Gui3
 
 
 def userInput():
-    stuff = {'corners': '4', 'height': '200', 'title': 'fun', 'width': '200'}
+    stuff = {'corners': '5', 'height': '150', 'title': 'fun', 'width': '300'}
     # stuff = {
     #     "title": input('Enter a title: '),
     #     "width": input('Width for the rectangle: '),
@@ -39,10 +39,10 @@ def showWindow(stuff, type):
         # Title the Window
         win.title('Second Window')
         # Set the variable that controls canvas & inner shape size
-        width = 250
-        height = 250
+        width = 200
+        height = 200
         # Create canvas
-        canvas = win.ca(width + 50, height + 50)
+        canvas = win.ca(250, 250)
         # Draw shapes
         canvas.rectangle([[-width/2, -height/2], [width/2, height/2]], fill='yellow')
         canvas.oval([[-width/2, -height/2], [width/2, height/2]], fill='#00ff00')
