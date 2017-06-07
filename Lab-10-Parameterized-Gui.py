@@ -1,5 +1,6 @@
 # Pull in Gui3 so we can use it...
 import Gui3
+# define win as the gui subcomponent of gui3
 
 
 def userInput():
@@ -14,33 +15,49 @@ def userInput():
     return stuff
 
 
-def showWindow(title):
-    # define win as the gui subcomponent of gui3
-    win = Gui3.Gui()
-    win.title(title)
-    win.mainloop()
+def showWindow(stuff, type):
+    if type:
+        # Create window on user's screen
+        win = Gui3.Gui()
+        # Title the Window
+        win.title(stuff['title'])
+        # Set the variable that controls canvas & inner shape size
+        width = int(stuff['width'])
+        height = int(stuff['height'])
+        # Create canvas
+        canvas = win.ca(width + 50, height + 50)
+        # Draw shapes
+        canvas.rectangle([[-width/2, -height/2], [width/2, height/2]], fill='yellow')
+        canvas.oval([[-width/2, -height/2], [width/2, height/2]], fill='#00ff00')
+        canvas.polygon([[-width/2, 0], [0, height/2], [width/2, 0], [0, -height/2]],
+                       outline='black', fill='white')
+        # Show the canvas to the user
+        win.mainloop()
+    else:
+        # Create window on user's screen
+        win = Gui3.Gui()
+        # Title the Window
+        win.title('Second Window')
+        # Set the variable that controls canvas & inner shape size
+        width = 250
+        height = 250
+        # Create canvas
+        canvas = win.ca(width + 50, height + 50)
+        # Draw shapes
+        canvas.rectangle([[-width/2, -height/2], [width/2, height/2]], fill='yellow')
+        canvas.oval([[-width/2, -height/2], [width/2, height/2]], fill='#00ff00')
+        canvas.polygon([[-width/2, 0], [0, height/2], [width/2, 0], [0, -height/2]],
+                       outline='black', fill='white')
+        # Show the canvas to the user
+        win.mainloop()
 
 
 # Main funtion, where the magic happens!
 def main():
+    # Get user input
     stuff = userInput()
-    showWindow('First Window')
-    showWindow('Second Window')
-
-    # Set the variable that controls canv
-    width = int(stuff['width'])
-    height = int(stuff['height'])
-
-    canvas = win.ca(width + 50, height + 50)
-
-    canvas.rectangle([[-width/2, -height/2], [width/2, height/2]], fill='yellow')
-
-    canvas.oval([[-width/2, -height/2], [width/2, height/2]], fill='#00ff00')
-
-    canvas.polygon([[-width/2, 0], [0, height/2], [width/2, 0], [0, -height/2]],
-                   outline='black', fill='white')
-
-    win.mainloop()
+    showWindow(stuff, True)
+    showWindow(stuff, False)
 
 
 # Lets run our main function!
