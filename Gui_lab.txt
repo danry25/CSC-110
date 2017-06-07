@@ -1,0 +1,10 @@
+1) What change needs to be made to the code, other than just adding the fill argument?
+
+To colorize and fill these shapes, I had to move the circle function in between where the
+rectangle and polygon are called to be drawn, I also ended up changing the circle function
+into an oval function so I could complete the standard version.
+
+2) Why is this necessary?
+
+If the circle call is not moved between the rectangle and rotated inner rectangle calls, the
+circle will be covered by the outer rectangle entirely.
