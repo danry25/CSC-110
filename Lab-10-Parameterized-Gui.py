@@ -1,5 +1,6 @@
 # Pull in Gui3 so we can use it...
 import Gui3
+import math
 # define win as the gui subcomponent of gui3
 
 
@@ -38,15 +39,25 @@ def showWindow(stuff, type):
         win = Gui3.Gui()
         # Title the Window
         win.title('Second Window')
-        # Set the variable that controls canvas & inner shape size
+        # Set the variable that controls inner shape size
         width = 200
         height = 200
+        step = 0
+        coords = []
+        for corner in range(int(stuff['corners'])):
+            r = 100
+            O = math.pi/2 + (step * (2*math.pi)/int(stuff['corners']))
+            coords += ([int(r * math.cos(O)), int(r * math.sin(O))])
+            step += 1
+        print(coords)
         # Create canvas
         canvas = win.ca(250, 250)
         # Draw shapes
         canvas.rectangle([[-width/2, -height/2], [width/2, height/2]], fill='yellow')
         canvas.oval([[-width/2, -height/2], [width/2, height/2]], fill='#00ff00')
-        canvas.polygon([[-width/2, 0], [0, height/2], [width/2, 0], [0, -height/2]],
+        # canvas.polygon([[-width/2, 0], [0, height/2], [width/2, 0], [0, -height/2]],
+        #                outline='black', fill='white')
+        canvas.polygon([[0, 100], [-95, 30], [-58, -80], [58, -80], [95, 30]],
                        outline='black', fill='white')
         # Show the canvas to the user
         win.mainloop()
