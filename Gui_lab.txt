@@ -1,3 +1,6 @@
+Dan Ryan
+Lab 10: Parameterized Gui
+
 1) What change needs to be made to the code, other than just adding the fill argument?
 
 To colorize and fill these shapes, I had to move the circle function in between where the

@@ -1,3 +1,8 @@
+# Dan Ryan
+# Lab 10: Parameterized Gui
+# Plus
+# Draw shapes on the screen, of different sizes and shapes depending on user input
+
 # Pull in Gui3 so we can use it...
 import Gui3
 import math
@@ -30,7 +35,6 @@ def userInput():
         # user input error triggered
         print('Error in input. Corners cannot be blank or non-numeric.')
         stuff['width'] = input('Try again. Enter the Corners: ')
-    print(stuff)
     return stuff
 
 
