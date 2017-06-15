@@ -1,0 +1,29 @@
+Dan Ryan
+Assignment 10: Prime factors
+
+To kick off this assignment, I built a quick MVP with all of the code not in functions. I then
+went and tested its functionality (and generated reference/baseline data), looked at what I
+needed to accomplish for the standard & challenge versions, and refactored my program into the
+required functions. Overall, not a bad approach, and it allowed me to get rubber on the road
+rapidly while verifying that everything worked.
+
+I think the only change I'd make in the future is to either have people knowledgeable in the
+topic at hand (Prime factorization) easily accessible, or educate oneself in that area so as to
+gain an understanding of it. As is, I'm reading up and waiting to hear back from a family friend
+who is a math professor. Should have contacted her sooner!
+
+For the vast majority of numbers, esp. in our range of 1000 to -1000, the factors are either
+within the first 11, or after being fully divided by those 11 factors, are left a prime
+remainder. I think the only things that may need to change for a much broader range of inputs
+would be adding perhaps a few more primes and changing the warnings in my script.
+
+Test cases:
+    12: 2, 2, 3
+    60: 2, 2, 3, 5
+    82: 2, 41
+    820: 2, 2, 5, 41
+    934: 2, 467
+    952: 2, 2, 2, 7, 17
+    -329: -1, 7, 47
+    -845: -1, 5, 13, 13
+    -909: -1, 3, 3, 101
