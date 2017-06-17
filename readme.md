@@ -14,7 +14,7 @@ This is the work I've submitted to or am working on for my CSC 110 class with Da
 [Assignment 3: Fish Pond](facweb.northseattle.edu/cl_djinguji/csc110-s17/a3-pond.html)
 
 
-[Week 10 Overview](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/notes/10-overview.html)
+# [Week 10 Overview](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/notes/10-overview.html)
      * Demo 11: [The math Module](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/notes/10d-math.html)
      * Demo 12: Creating Modules
      * Read sections 5.9 - 5.10
@@ -24,8 +24,7 @@ This is the work I've submitted to or am working on for my CSC 110 class with Da
 * Quiz 10: Files & Errors - 9 out of 10 points
 * [Make-Up Assignment: Children's Songs, the Reprise](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/a11-song_2.html)
 
-[Week 11 Overview](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/notes/11-overview.html)
-
+# [Week 11 Overview](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/notes/11-overview.html)
      * [Object oriented programming](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/notes/11-objects.html)
      * Demo 13: [Making a class](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/notes/11d-object.html)
      * [Arcane Python](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/notes/11-arcane.html)
