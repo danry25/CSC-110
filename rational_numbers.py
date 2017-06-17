@@ -1,7 +1,7 @@
 # Dan Ryan
 # Quiz 11: The rational Class
 # Complete w/Extra Credit
-#
+# Play around with rational numbers, do math with 'em for fun & profit
 
 
 # Define Class
