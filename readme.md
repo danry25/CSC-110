@@ -5,7 +5,18 @@ This is the work I've submitted to or am working on for my CSC 110 class with Da
 [Syllabus](https://facweb.northseattle.edu/cl_djinguji/csc110-s17/00-syllabus.html)
 
 ## Assignments & Labs
-[Lab 1: Background](https://facweb.northseattle.edu/cl_djinguji/csc110-s17/l1-background.html)
+
+[Week 1 Overview](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/notes/01-overview.html)
+* Course Materials:
+[Notes about the Course](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/notes/01-course.html),
+  Demo 1: [Working Interactively in IDLE](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/notes/01d-idle.html),
+  [Variables and Assignment](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/notes/01-assign.html),
+  Demo 2: [Creating a Python Script](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/notes/01d-script.html) &
+  Video 1: [Creating a Python Script](http://facweb.northseattle.edu/cl_djinguji/csc/csc110/videos/v1-first_script.swf)
+  * Read: Appendix B,
+  Chapter 1 (Section 1.3, optional) &
+  General section of the Canvas course website
+[Lab 1: Background Information](https://facweb.northseattle.edu/cl_djinguji/csc110-s17/l1-background.html) - [Sample solution](http://facweb.northseattle.edu/cl_djinguji/csc110-s17/soln/lab1.txt)
 [Assignment 1: Class Tools](https://facweb.northseattle.edu/cl_djinguji/csc110-s17/a1-tools.html)
 
 [Lab 2: Gather Data](https://facweb.northseattle.edu/cl_djinguji/csc110-s17/l2-gathering.html)
